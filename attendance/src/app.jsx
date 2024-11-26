@@ -1,6 +1,6 @@
 
 import Table1 from "./components/class_components"
-import { Table2 } from "./components/class_components2"
+import Table3 from "./components/class_components3"
 import  Day1  from "./components/Day1"
 
 function app() {
@@ -17,7 +17,7 @@ function app() {
         <h2>Class Component table</h2>
         <Table1/>
         <h2>Props in Component table</h2>
-        <Table2 props={students}/>
+        <Table3 props={students}/>
     </>
     )
 }

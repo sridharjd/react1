@@ -1,7 +1,7 @@
-const Table2 = () => {
+const F_components = () => {
     return(
         <h1>Hello</h1>
     )
 }
 
-export default Table2
+export default F_components
