@@ -13,14 +13,18 @@ Day 1: Introduction to React
       It is a extension for combines HTML like syntax with JS syntax
    
    4. Create new React project
-      created react project Name: "Attendance"
+      created react project Name: "attendance"
    
    5. Create simple React components
-      Created one sinple component and file is Day1.jsx
+      Created one simple component and file is Day1.jsx
 
 Challenges : I didn't know about github
 
 Day 2: Components and props
    1. learn to Pull and Push local folder to github repository
 
-   2. function and class components 
+   2. Function and Class components 
+      create class component named as class_component.jsx
+
+   3. Props In components
+      Apply props in components table name as class_components2.jsx

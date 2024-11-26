@@ -16,15 +16,15 @@ class Table1 extends Component {
                         </tr>
                         <tr>
                             <td>John</td>
-                            <td>24</td>
+                            <td>25</td>
                         </tr>
                         <tr>
                             <td>David</td>
-                            <td>24</td>
+                            <td>30</td>
                         </tr>
                         <tr>
                             <td>Jackie</td>
-                            <td>24</td>
+                            <td>20</td>
                         </tr>
                     </tbody>
                 </table>
