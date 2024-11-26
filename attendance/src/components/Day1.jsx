@@ -1,5 +1,4 @@
-
-export const Day1 = () => {
+const Day1 = () => {
   return (
     <div>
         <h1 className="Header">Day 1 tasks</h1>
@@ -10,3 +9,4 @@ export const Day1 = () => {
     </div>
   )
 }
+export default Day1

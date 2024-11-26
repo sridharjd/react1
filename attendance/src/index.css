@@ -1,3 +1,22 @@
 .Header{
-    color:rgb(187, 0, 224);
+    color:rgb(33, 102, 250);
+}
+
+.TableCSS{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.TableCSS th, .TableCSS td{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid#ddd;
+}
+
+.TableCSS th {
+    background-color:#f2f2f2;
+}
+
+.TableCSS tr:hover{
+    background-color:#f1f1f1;
 }
