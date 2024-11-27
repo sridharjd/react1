@@ -23,7 +23,7 @@ Challenges : I didn't know about github
 Day 2: Components and props
    1. learn to Pull and Push local folder to github repository
 
-   2. Function and Class components 
+   2. Components 
       create class component named as class_component.jsx
 
    3. Props In Class components
@@ -34,3 +34,6 @@ Day 2: Components and props
 
    5. State in function components
       create simple counter app using useState file as state1.jsx 
+   
+   6. State in class components
+      create simple counter app using useState file as state2.jsx 

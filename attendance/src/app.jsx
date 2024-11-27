@@ -3,7 +3,13 @@ import Table1 from "./components/class_components"
 import Table3 from "./components/class_components3"
 import  Day1  from "./components/Day1"
 import { Table4 } from "./components/function_class"
-import { Counter } from "./components/state1"
+import FetchData from "./components/life cycle"
+import { Counter1 } from "./components/state1"
+import Counter2 from "./components/state2"
+
+
+
+
 
 function app() {
 
@@ -31,7 +37,11 @@ function app() {
         <h2>Props in Function Component table</h2>
         <Table4 stdid={stdid}/>
         <h2>State in function components</h2>
-        <Counter/>
+        <Counter1/>
+        <h2>State in Class components</h2>
+        <Counter2 />
+        <FetchData/>
+
     </>
     )
 }
