@@ -26,5 +26,8 @@ Day 2: Components and props
    2. Function and Class components 
       create class component named as class_component.jsx
 
-   3. Props In components
-      Apply props in components table name as class_components2.jsx
+   3. Props In Class components
+      Apply props in class components table name as class_components3.jsx
+   
+   4. Props In Function Class components
+      Apply props in function components table name as function_class.jsx

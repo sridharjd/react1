@@ -9,12 +9,14 @@ class Table3 extends Component {
                     <thead>
                         <th>Name</th>
                         <th>Age</th>
+                        <th>Grade</th>
                     </thead>
                     <tbody>
                         {props.map((props, index) =>(
                             <tr key={index}>
                                 <td>{props.name}</td>
                                 <td>{props.age}</td>
+                                <td>{props.grade}</td>
                             </tr>
                         ))}
                     </tbody>
