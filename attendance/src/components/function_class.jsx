@@ -18,5 +18,4 @@ export const Table4 = ({stdid}) => {
         </table>
     </div>
   )
-}
-
+};

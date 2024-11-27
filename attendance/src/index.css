@@ -20,3 +20,10 @@
 .TableCSS tr:hover{
     background-color:#f1f1f1;
 }
+
+.Counter{
+    border: 1px solid#000000;
+    margin-right: 600px;
+    border-collapse: collapse;
+    background-color:#f0a8a8;
+}

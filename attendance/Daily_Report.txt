@@ -31,3 +31,6 @@ Day 2: Components and props
    
    4. Props In Function Class components
       Apply props in function components table name as function_class.jsx
+
+   5. State in function components
+      create simple counter app using useState file as state1.jsx 

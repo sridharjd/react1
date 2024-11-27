@@ -2,7 +2,7 @@ import { Component } from "react";
 
 class Table3 extends Component {
      render(){
-      const {props} = this.props;
+      const {students} = this.props;
          return(
              <div>
                  <table className ="TableCSS">
@@ -12,11 +12,11 @@ class Table3 extends Component {
                         <th>Grade</th>
                     </thead>
                     <tbody>
-                        {props.map((props, index) =>(
+                        {students.map((students, index) =>(
                             <tr key={index}>
-                                <td>{props.name}</td>
-                                <td>{props.age}</td>
-                                <td>{props.grade}</td>
+                                <td>{students.name}</td>
+                                <td>{students.age}</td>
+                                <td>{students.grade}</td>
                             </tr>
                         ))}
                     </tbody>
