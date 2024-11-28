@@ -36,4 +36,7 @@ Day 2: Components and props
       create simple counter app using useState file as state1.jsx 
    
    6. State in class components
-      create simple counter app using useState file as state2.jsx 
+      create simple counter app using this.state file as state2.jsx 
+
+   7. life cycle in Components
+      create simple counter app componentDidMount, ComponentDidUpdate, ComponentWillUnmount file as life cycle.jsx 

@@ -1,5 +1,5 @@
 
-export const Table4 = ({stdid}) => {
+export const Table4 = ({students}) => {
   return (
     <div>
         <table className="TableCSS">
@@ -8,10 +8,10 @@ export const Table4 = ({stdid}) => {
                 <th>ID</th>
             </thead>
             <tbody>
-                {stdid.map((stdid, index) =>(
+                {students.map((students, index) =>(
                     <tr key={index}>
-                        <td>{stdid.name}</td>
-                        <td>{stdid.id}</td>
+                        <td>{students.name}</td>
+                        <td>{students.id}</td>
                     </tr>
                 ))}
             </tbody>

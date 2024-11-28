@@ -1,32 +1,48 @@
 import { Component } from "react";
 
-class FetchData extends Component {
-    constructor(props) {
+
+class Lifecycle extends Component{
+
+    constructor (props){
         super(props);
-        this.state = { data: null, loading: true };
+        this.state = {count: 11}
+        console.log("cons1")
     }
-
-    componentDidMount() {
-        fetch('https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/2244/property/MolecularFormula/JSON')
-            .then((response) => response.json())
-            .then((data) => this.setState({ data, loading: false }));
+    componentDidMount(){
+        console.log("Init Mount")
     }
-
-    componentDidUpdate(prevProps, prevState) {
-        if (prevState.data !== this.state.data) {
-            console.log("Data updated");
+    componentDidUpdate(prevProps, prevState){
+        console.log(`${prevState.count} to ${this.state.count}`);     
+    }
+    componentWillUnmount(){
+        console.log("UnMount")
+        if (this.state.count>10){
+            alert("counting Number Start with above 10. Reset the count then start")
         }
     }
-
-    componentWillUnmount() {
-        console.log("Cleaning up resources...");
+    increase = ()=>{
+        this.setState({count:this.state.count+2})
     }
-
-    render() {
-        if (this.state.loading) {
-            return <p>Loading...</p>;
-        }
-        return <div>Data: {JSON.stringify(this.state.data)}</div>;
+    decrease = ()=>{
+        this.setState({count:this.state.count-2})
+    }
+    reset = ()=>{
+        this.setState({count:0})
+    }
+    render(){
+        console.log("rend1")
+        return(
+            <>
+                <div className="Counter">
+                    <h1>Lifecycle Counter App = {this.state.count} </h1>
+                    <button onClick={this.increase}>Increase</button>
+                    <button onClick={this.decrease}>Decrease</button>
+                    <button onClick={this.reset}>Reset</button>
+                </div>
+            </>
+        )
     }
 }
-export default FetchData
+export default Lifecycle
+
+

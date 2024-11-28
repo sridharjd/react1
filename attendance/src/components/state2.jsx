@@ -18,7 +18,7 @@ class Counter2 extends Component {
             <div className="Counter">
                 <h2>Counter App_2 = {this.state.count} </h2>
                 <button onClick={this.increase}>Increase</button>
-                <button onClick={this.decrease}>Deccrease</button>
+                <button onClick={this.decrease}>Decrease</button>
             </div>
         )
     }
