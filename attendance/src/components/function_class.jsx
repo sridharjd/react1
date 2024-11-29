@@ -4,8 +4,10 @@ export const Table4 = ({students}) => {
     <div>
         <table className="TableCSS">
             <thead>
-                <th>Name</th>
-                <th>ID</th>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                </tr>
             </thead>
             <tbody>
                 {students.map((students, index) =>(

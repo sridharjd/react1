@@ -6,8 +6,10 @@ class Table1 extends Component {
             <div>
                 <table className ="TableCSS">
                     <thead>
-                        <th>Name</th>
-                        <th>Age</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>

@@ -7,6 +7,7 @@ import Lifecycle from "./components/life cycle"
 import { Counter1 } from "./components/state1"
 import Counter2 from "./components/state2"
 import Formik1 from "./forms/formik1"
+import Formik2 from "./forms/formik2"
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <h2>Lifecycles in components</h2>
         <Lifecycle/>
         <Formik1/>
+        <Formik2/>
     </>
     )
 }

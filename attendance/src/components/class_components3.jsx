@@ -7,9 +7,11 @@ class Table3 extends Component {
              <div>
                  <table className ="TableCSS">
                     <thead>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Grade</th>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                        </tr>
                     </thead>
                     <tbody>
                         {students.map((students, index) =>(
