@@ -17,7 +17,7 @@ class Lifecycle extends Component{
     componentWillUnmount(){
         console.log("UnMount")
         if (this.state.count>10){
-            alert("counting Number Start with above 10. Reset the count then start")
+            alert("Life cycle counting Number Start with above 10. Reset the count then start")
         }
     }
     increase = ()=>{

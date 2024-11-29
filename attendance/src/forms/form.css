@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height viewport */
+    margin: 0;
+    background-color: #f0f4f8; /* Light background color for better aesthetics */
+    font-family: Arial, sans-serif; /* Default font */
+  
+  /* General styling for the form container */
+  form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for labels */
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Styling for text and number inputs */
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="number"]:focus,
+  form input[type="email"]:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Styling for radio buttons */
+  form input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  form input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Form container heading */
+  form h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222;
+    font-size: 18px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+  }
+  
+  .formhead {
+    text-align: center;
+  };

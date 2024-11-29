@@ -40,3 +40,14 @@ Day 2: Components and props
 
    7. life cycle in Components
       create simple counter app componentDidMount, ComponentDidUpdate, ComponentWillUnmount file as life cycle.jsx 
+
+
+Day 3: Formik
+   1. Over view of MUI
+
+   2. create Basic form includes fields like text, number, mobile, array, select, multiselect, checkbox, radio and the form name as formik1.jsx
+
+   3. From above Basic form validate using YUP
+
+   4. All values stored as json and values will be alert message when click submit button
+

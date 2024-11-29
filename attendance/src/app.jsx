@@ -6,12 +6,9 @@ import { Table4 } from "./components/function_class"
 import Lifecycle from "./components/life cycle"
 import { Counter1 } from "./components/state1"
 import Counter2 from "./components/state2"
+import Formik1 from "./forms/formik1"
 
-
-
-
-
-function app() {
+function App() {
 
     const students =[
         {id:1, name:"Sam", age:24, grade:"O"},
@@ -35,9 +32,8 @@ function app() {
         <Counter2 />
         <h2>Lifecycles in components</h2>
         <Lifecycle/>
-        
-
+        <Formik1/>
     </>
     )
 }
-export default app
+export default App
