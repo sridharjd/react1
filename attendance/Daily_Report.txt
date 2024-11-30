@@ -51,3 +51,6 @@ Day 3: Formik
 
    4. All values stored as json and values will be alert message when click submit button
 
+Day 4: Mantine React table
+   1. create Mantine table and display above json data in table format
+

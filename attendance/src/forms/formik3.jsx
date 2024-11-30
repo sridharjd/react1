@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Table } from '@mantine/core';
+import React, { useState, useMemo } from 'react';
 import { Field, Formik, Form } from 'formik';
 import * as Yup from 'yup';
+import { MRT_Table, useMantineReactTable } from 'mantine-react-table';
+import { useMantineTheme } from '@mantine/core';
 import './form.css';
+  
 
 
 const Yupschema = Yup.object().shape({
@@ -15,18 +17,45 @@ const Yupschema = Yup.object().shape({
     state: Yup.string().required(),
     edu: Yup.array().min(1, "Select at least one option").of(Yup.string()).required("Select your Education"),
     terms: Yup.boolean().oneOf([true], "Must accept the terms")
-});
+})
 
 const stateOptions = ["TamilNadu", "Kerala", "Andhra Pradesh", "Karnataka"];
 const eduOptions = ["HSC", "SSLC", "UG", "PG"];
 
-const Formik2 = () => {
-    const [formValues, setFormValues] = useState({});
-    const [showTable, setShowTable] = useState();
 
+const Formik3 = () => {
+    const [formValues, setFormValues] = useState([]);
+    
+
+    const { colorScheme } = useMantineTheme();
+    const columns = useMemo(() => [
+      { accessorKey: 'firstname', header: 'First Name' },
+      { accessorKey: 'lastname', header: 'Last Name' },
+      { accessorKey: 'mobile', header: 'Mobile Number' },
+      { accessorKey: 'age', header: 'Age' },
+      { accessorKey: 'email', header: 'Email' },
+      { accessorKey: 'gender', header: 'Gender' },
+      { accessorKey: 'state', header: 'State' },
+      { accessorKey: 'edu', header: 'Education', Cell: ({ cell }) => cell.getValue().join(", ") },
+      ], []);
+    
+      const table = useMantineReactTable({
+        columns,
+        data : formValues,
+        enableColumnActions: false,
+        enableColumnFilters: false,
+        enablePagination: false,
+        enableSorting: false,
+        mantineTableProps: {
+            highlightOnHover: true,
+            withColumnBorders: true,
+            withBorder: colorScheme === 'dark',
+        }
+      });
+    
     return (
         <div>
-            <h2 className="formhead">Basic Form</h2>
+            <h2 className="head">Basic Form 3</h2>
             <Formik
                 initialValues={{
                     firstname: "",
@@ -40,13 +69,13 @@ const Formik2 = () => {
                     terms: false,
                 }}
                 onSubmit={(values) => {
-                    setFormValues(values);  // Store form values when submitted
-                    alert(JSON.stringify(values, null, 2)); // Display in alert
-                    setShowTable(values); // Show table after form submission
+                    setFormValues((prev) => [...prev, values])  
+                    alert(JSON.stringify(values, null, 2))
+                    resetForm();
                 }}
                 validationSchema={Yupschema}
             >
-                {({ errors, touched, setFieldValue, values }) => (
+                {({ errors, touched,}) => (
                     <Form>
                         <label htmlFor="firstname">First Name</label>
                         <Field
@@ -143,25 +172,12 @@ const Formik2 = () => {
                         )}
 
                         <label>Education</label>
-                        {eduOptions.map((edu, index) => (
-                            <div key={index}>
-                                <Field
-                                    type="checkbox"
-                                    name="edu"
-                                    value={edu}
-                                    onChange={() => {
-                                        const newEdu = [...values.edu];
-                                        if (newEdu.includes(edu)) {
-                                            newEdu.splice(newEdu.indexOf(edu), 1);
-                                        } else {
-                                            newEdu.push(edu);
-                                        }
-                                        setFieldValue("edu", newEdu);
-                                    }}
-                                />
-                                {edu}
-                            </div>
-                        ))}
+                                    {eduOptions.map((edu, index) => (
+                                    <div key={index}>
+                                        <Field type="checkbox" name="edu" value={edu} />
+                                        {edu}
+                                    </div>
+                                    ))}
                         {errors.edu && touched.edu && (
                             <div className="error">{errors.edu}</div>
                         )}
@@ -181,30 +197,12 @@ const Formik2 = () => {
                 )}
             </Formik>
 
-            {/* Mantine Table to display the JSON data after submission */}
-            {showTable && Object.keys(formValues).length > 0 && (
-                <div style={{ marginTop: '20px' }}>
-                    <h3>Submitted Form Data</h3>
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>Field</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {Object.entries(formValues).map(([key, value]) => (
-                                <tr key={key}>
-                                    <td>{key}</td>
-                                    <td>{Array.isArray(value) ? value.join(", ") : value}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </Table>
+                <div style={{ marginTop: "20px" }}>
+                    <h3 className="head" >Submitted Data table</h3>
+                    <MRT_Table  table={table} />
                 </div>
-            )}
         </div>
     );
 };
 
-export default Formik2;
+export default Formik3;

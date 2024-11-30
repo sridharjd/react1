@@ -8,6 +8,7 @@ import { Counter1 } from "./components/state1"
 import Counter2 from "./components/state2"
 import Formik1 from "./forms/formik1"
 import Formik2 from "./forms/formik2"
+import Formik3 from "./forms/formik3"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Lifecycle/>
         <Formik1/>
         <Formik2/>
+        <Formik3/>
     </>
     )
 }
