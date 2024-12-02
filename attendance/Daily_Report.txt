@@ -1,3 +1,6 @@
+
+github address : https://github.com/sridharjd/react1
+
 Day 1: Introduction to React
    1. What is React?
       React is a JS library for building UI
@@ -53,4 +56,11 @@ Day 3: Formik
 
 Day 4: Mantine React table
    1. create Mantine table and display above json data in table format
+   2. Axios library
+   3. Hooks (useState, useEffect, useMemo)
+   4. Redux
 
+Day 5:
+   1. Router 
+   2. Created route and navigation
+   

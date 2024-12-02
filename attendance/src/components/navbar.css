@@ -1,0 +1,45 @@
+/* Style for the navbar container */
+div {
+    background-color: #dedfe2; /* Dark background */
+    padding: 1rem; /* Spacing around the navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Navbar title */
+  h2 {
+    color: #0c0d0e; /* React blue color */
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  /* Navbar list */
+  ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align links in a row */
+    gap: 1rem; /* Spacing between links */
+  }
+  
+  /* Navbar list items */
+  li {
+    display: inline; /* Ensures items appear inline */
+  }
+  
+  /* Navbar links */
+  a {
+    color: rgb(47, 60, 252); /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+  }
+  
+  /* Link hover effect */
+  a:hover {
+    color: #61dafb; /* Change to React blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }
+  

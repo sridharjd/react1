@@ -1,43 +1,47 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Table1 from "./pages/class_components"
+import Table3 from "./pages/class_components3"
+import  Day1  from "./pages/Day1"
+import { Table4 } from "./pages/function_class"
+import Lifecycle from "./pages/life cycle"
+import { Counter1 } from "./pages/state1"
+import Counter2 from "./pages/state2"
+import Formik1 from "./pages/formik1"
+import Axios1 from "./pages/axios"
+import Formik2 from "./pages/formik2"
+import Formik3 from "./pages/formik3"
+import Navbar from "./components/Navbar"
+import Error from "./pages/Error"
 
-import Table1 from "./components/class_components"
-import Table3 from "./components/class_components3"
-import  Day1  from "./components/Day1"
-import { Table4 } from "./components/function_class"
-import Lifecycle from "./components/life cycle"
-import { Counter1 } from "./components/state1"
-import Counter2 from "./components/state2"
-import Formik1 from "./forms/formik1"
-import Formik2 from "./forms/formik2"
-import Formik3 from "./forms/formik3"
 
 function App() {
-
-    const students =[
-        {id:1, name:"Sam", age:24, grade:"O"},
-        {id:2, name:"John", age:25, grade:"A"},
-        {id:3, name:"David", age:30, grade:"B"},
-        {id:4, name:"Jackie", age:20, grade:"A"},
-        
-    ]
   
-    return (<>
-        <Day1/>
-        <h2>Class Component table</h2>
-        <Table1/>
-        <h2>Props in Class Component table</h2>
-        <Table3 students={students}/>
-        <h2>Props in Function Component table</h2>
-        <Table4 students={students}/>
-        <h2>State in function components</h2>
-        <Counter1/>
-        <h2>State in Class components</h2>
-        <Counter2 />
-        <h2>Lifecycles in components</h2>
-        <Lifecycle/>
-        <Formik1/>
-        <Formik2/>
-        <Formik3/>
-    </>
-    )
+    const students =[
+                {id:1, name:"Sam", age:24, grade:"O"},
+                {id:2, name:"John", age:25, grade:"A"},
+                {id:3, name:"David", age:30, grade:"B"},
+               {id:4, name:"Jackie", age:20, grade:"A"},    
+            ]
+
+  return (
+     <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path="/Day1" element={<Day1/>}/>
+        <Route path ="/Table1" element ={<Table1/>}/>
+        <Route path ="/Table3" element ={<Table3 students={students} />}/>
+        <Route path ="/Table4" element = {<Table4 students={students} />}/>
+        <Route path ="/Counter1" element ={<Counter1/>}/>
+        <Route path ="/Counter2" element ={<Counter2/>}/>
+        <Route path="/Lifecycle" element={<Lifecycle/>}/>
+        <Route path ="/Formik1" element ={<Formik1/>}/>
+        <Route path ="/Formik2" element ={<Formik2/>}/>
+        <Route path ="/Formik3" element = {<Formik3/>}/>
+        <Route path ="/Axios1" element = {<Axios1/>}/>
+        <Route path ="*" element = {<Error/>}/>
+      </Routes>
+     </BrowserRouter>
+  )
 }
+
 export default App

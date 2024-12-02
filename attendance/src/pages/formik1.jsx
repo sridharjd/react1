@@ -20,7 +20,7 @@ const edu = ["HSC", "SSLC", "UG", "PG"];
 const  Formik1 = () =>{
     return(
         <div>
-            <h2 className="formhead">Basic Form</h2>
+            <h2 className="head">Basic Form</h2>
             <Formik
                 initialValues={{
                     firstname:"",
