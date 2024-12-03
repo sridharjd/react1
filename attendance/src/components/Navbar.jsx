@@ -16,8 +16,9 @@ const Navbar = () => {
         <li><Link to="/Lifecycle">Lifecycle</Link></li>
         <li><Link to="/Formik1">Formik 1</Link></li>
         <li><Link to="/Formik2">Formik 2</Link></li>
-        <li><Link to="/Formik3">Formik 3</Link></li>
         <li><Link to="/Axios1">API</Link></li>
+        <li><Link to="/User">Add User</Link></li>
+        <li><Link to="/UsersDB">User DB</Link></li>
       </ul>
     </div>
   );

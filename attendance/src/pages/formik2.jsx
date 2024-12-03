@@ -67,9 +67,10 @@ const Formik2 = () => {
                     edu: [],
                     terms: false,
                 }}
-                onSubmit={(values) => {
-                    setFormValues((prev) => [...prev, values])  
+                onSubmit={(values, { resetForm }) =>{
+                    setFormValues((prev) => [...prev, values])
                     alert(JSON.stringify(values, null, 2))
+                    console.log(values)
                     resetForm();
                 }}
                 validationSchema={Yupschema}

@@ -2,15 +2,20 @@ import { Field, Formik, Form } from "formik"
 import './form.css';
 import * as Yup from 'yup'
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setUsers } from "../slices/userSlice";
 
 
 const Yupschema = Yup.object().shape({
     Userid: Yup.string().required("It is a required field"),
     Password: Yup.string().required("It is a required field"),
 })
-const Formik3 = () =>{
+const User = () =>{ 
+
+    const dispatch = useDispatch();
 
     const [formInput, setFormInput] = useState([])
+
 
     return(
         <div>
@@ -19,10 +24,12 @@ const Formik3 = () =>{
                     Userid:"",
                     Password :"",
                 }}
-                onSubmit={(values) =>{
-                    setFormInput((prev) => [...prev, values])
-                    alert(JSON.stringify(values, null, 2))
-                    console.log(values)
+                onSubmit={(values, { resetForm }) => {
+                    setFormInput((prev) => [...prev, values]); 
+                    alert(JSON.stringify(values, null, 2));
+                    console.log(values);
+                    dispatch(setUsers([...formInput, values])); 
+                    resetForm();
                 }}
                 
                 validationSchema={Yupschema}
@@ -60,4 +67,4 @@ const Formik3 = () =>{
         </div>
     )
 };
-export default Formik3;
+export default User;
